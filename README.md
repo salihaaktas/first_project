@@ -19,11 +19,11 @@ int main() {
 
     printf("Kullanıcı Adı: ");
     fgets(username, MAX_USERNAME_LENGTH, stdin);
-    username[strcspn(username, "\n")] = '\0'; // Kullanıcı adı sonundaki newline karakterini temizle
-
+    username[strcspn(username, "\n")] = '\0'; 
+    
     printf("Şifre: ");
     fgets(password, MAX_PASSWORD_LENGTH, stdin);
-    password[strcspn(password, "\n")] = '\0'; // Şifre sonundaki newline karakterini temizle
+    password[strcspn(password, "\n")] = '\0'; 
 
     if (girisYap(username, password)) {
         printf("Giriş başarılı! Hoş geldiniz.\n");
@@ -38,8 +38,8 @@ int main() {
 int girisYap(char *username, char *password) {
     // Kullanıcı adı ve şifreyi karşılaştır
     if (strcmp(username, CORRECT_USERNAME) == 0 && strcmp(password, CORRECT_PASSWORD) == 0) {
-        return 1;  // Giriş başarılı
+        return 1; 
     } else {
-        return 0;  // Giriş başarısız
+        return 0;  
     }
 }
